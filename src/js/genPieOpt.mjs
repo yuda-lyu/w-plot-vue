@@ -211,7 +211,7 @@ function genPieOpt(width, height, keys, rds, optPlot = {}) {
         // console.log('optHc(pie)', optHc)
     }
 
-    //legend
+    //legend, 會使用margin故放最後
     if (true) {
 
         //setLegendLoc

@@ -5,11 +5,11 @@ import getFiles from 'w-package-tools/src/getFiles.mjs'
 
 
 let fdSrc = './src/components/'
-let fn_tar = 'WGeoVue.vue'
+let fn_tar = 'WPlotVue.vue'
 
 
 function main() {
-    //讀取components裡面組件, 自動生成WGeoVue, 供rollup打包整體組件
+    //讀取components裡面組件, 自動生成WPlotVue, 供rollup打包整體組件
 
     //getFiles
     let ltfs = getFiles(fdSrc)
@@ -56,13 +56,13 @@ function main() {
 `<script>
 ${_.join(c1, '\r\n')}
 
-let WGeoVue = {
+let WPlotVue = {
     install: function(Vue) {
 ${_.join(c2, '\r\n')}
     }
 }
 
-export default WGeoVue
+export default WPlotVue
 </script>
 
 `

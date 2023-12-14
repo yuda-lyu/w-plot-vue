@@ -45,11 +45,11 @@ function getDefAxis(opt = {}) {
                 fontSize: labelFontSize,
                 color: labelColor,
             },
-            formatter: function() {
+            formatter: function(hc) {
                 if (vDig) {
-                    return dig(this.value, vDig)
+                    return dig(hc.value, vDig)
                 }
-                return this.value
+                return hc.value
             },
         },
 

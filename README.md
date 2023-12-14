@@ -1,5 +1,5 @@
 # w-plot-vue
-A geo component for vue(vue2).
+A plot component for vue(vue2).
 
 ![language](https://img.shields.io/badge/language-JavaScript-orange.svg) 
 [![language](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://github.com/vuejs/vue) 
@@ -32,10 +32,10 @@ Import all components:
 ></w-plot>
 
 //import
-import WGeoVue from 'w-plot-vue'
+import WPlotVue from 'w-plot-vue'
 
 //use
-Vue.use(WGeoVue)
+Vue.use(WPlotVue)
 ```
 Import one component:
 ```alias
@@ -65,7 +65,7 @@ export default {
 
 [Necessary] Add script for w-plot-vue.
 ```alias
-<script src="https://cdn.jsdelivr.net/npm/w-plot-vue@1.0.0/dist/w-plot-vue.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/w-plot-vue@1.0.1/dist/w-plot-vue.umd.js"></script>
 ```
 Directly use:
 ```alias

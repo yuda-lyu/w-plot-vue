@@ -4,7 +4,7 @@
         v-if="hasOptRose"
     >
 
-        <div :style="`width:${getWidth}px; max-width:${getWidth}px;`">
+        <div :style="`width:${picWidth}px; max-width:${picWidth}px;`">
             <slot
                 name="top"
                 :opt="optRose"
@@ -15,7 +15,7 @@
             :options="optRose"
         ></WPlot>
 
-        <div :style="`width:${getWidth}px; max-width:${getWidth}px;`">
+        <div :style="`width:${picWidth}px; max-width:${picWidth}px;`">
             <slot
                 name="bottom"
                 :opt="optRose"
@@ -54,6 +54,24 @@ export default {
     },
     computed: {
 
+        picWidth: function() {
+            let vo = this
+            let w = get(vo, 'opt.width', 0)
+            return w
+        },
+
+        picHeight: function() {
+            let vo = this
+            let w = get(vo, 'opt.height', 0)
+            return w
+        },
+
+        ks: function() {
+            let vo = this
+            let ks = get(vo, 'opt.keys', [])
+            return ks
+        },
+
         hasOptRose: function() {
             //console.log('computed hasOptRose')
 
@@ -71,11 +89,8 @@ export default {
 
             let r = null
             try {
-                let w = vo.getWidth()
-                let h = vo.getHeight()
-                let keys = get(vo, 'opt.keys', [])
                 let rds = get(vo, 'opt.rds', [])
-                r = genRoseOpt(w, h, keys, rds, vo.opt)
+                r = genRoseOpt(vo.picWidth, vo.picHeight, vo.ks, rds, vo.opt)
             }
             catch (err) {
                 console.log(err)
@@ -86,18 +101,6 @@ export default {
 
     },
     methods: {
-
-        getWidth: function() {
-            let vo = this
-            let w = get(vo, 'opt.width', 0)
-            return w
-        },
-
-        getHeight: function() {
-            let vo = this
-            let w = get(vo, 'opt.height', 0)
-            return w
-        },
 
     }
 }

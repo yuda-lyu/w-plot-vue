@@ -7,7 +7,7 @@ let fdTar = './dist'
 
 
 rollupFiles({
-    fns: 'WGeoVue.vue',
+    fns: 'WPlotVue.vue',
     fdSrc,
     fdTar,
     nameDistType: 'kebabCase',

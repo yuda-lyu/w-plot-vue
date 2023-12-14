@@ -4,6 +4,7 @@ import each from 'lodash-es/each'
 import size from 'lodash-es/size'
 import merge from 'lodash-es/merge'
 import isNumber from 'lodash-es/isNumber'
+// import range from 'lodash-es/range'
 // import cloneDeep from 'lodash-es/cloneDeep'
 import haskey from 'wsemi/src/haskey.mjs'
 // import isestr from 'wsemi/src/isestr.mjs'
@@ -26,6 +27,9 @@ function genBarOpt(width, height, keys, rds, optPlot = {}) {
 
     //direction
     let direction = get(optPlot, 'direction', 'vertical')
+    if (direction !== 'vertical' && direction !== 'horizontal') {
+        direction = 'vertical'
+    }
 
     //xTitle
     let xTitle = get(optPlot, 'xTitle', '')
@@ -71,6 +75,9 @@ function genBarOpt(width, height, keys, rds, optPlot = {}) {
 
     //barShowLabels
     let barShowLabels = get(optPlot, 'barShowLabels', true)
+
+    //barUseInnerLabelsForHorizontal
+    let barUseInnerLabelsForHorizontal = get(optPlot, 'barUseInnerLabelsForHorizontal', false)
 
     //showLegend
     let showLegend = get(optPlot, 'showLegend', false)
@@ -177,8 +184,9 @@ function genBarOpt(width, height, keys, rds, optPlot = {}) {
     let _dax1 = getDefAxis(optPlot)
     let _dax2 = {
         categories,
-        crosshair: true,
-        panningEnabled: false,
+        // crosshair: true,
+        // panningEnabled: false,
+        // tickmarkPlacement: 'on',
         labels: {
             allowOverlap: true,
             // autoRotationLimit: 0,
@@ -190,18 +198,20 @@ function genBarOpt(width, height, keys, rds, optPlot = {}) {
     // dax.min = xmin
     // dax.max = xmax
     // if (!isestr(xtitle)) {
-    //     dax.labels.formatter = function () {
+    //     dax.labels.formatter = function (hc) {
     //         return ''
     //     }
     // }
-    dax.opposite = false
     // console.log('dax', dax)
 
     //day
-    let day = getDefAxis(optPlot)
+    let _day1 = getDefAxis(optPlot)
+    let _day2 = {
+        // tickmarkPlacement: 'on',
+    }
+    let day = merge(_day1, _day2)
     day.title.text = yTitle
     day.min = 0 //從0開始
-    // day.opposite = false
     // console.log('day', day)
 
     //dlg
@@ -255,6 +265,43 @@ function genBarOpt(width, height, keys, rds, optPlot = {}) {
         // console.log('optHc(margin)', optHc)
     }
 
+    //stackPercent
+    if (barDisplay === 'stackPercent') {
+        if (direction === 'vertical') {
+            optHc.chart.marginLeft += 11
+        }
+        optHc.yAxis.labels.formatter = (hc) => {
+            return `${hc.value}%`
+        }
+    }
+
+    //horizontal, 會影響marginLeft故放margin後面
+    if (direction === 'horizontal' && barUseInnerLabelsForHorizontal) {
+        optHc.chart.marginLeft = 40
+        optHc.xAxis.title.margin = 21
+        optHc.xAxis.labels.enabled = false
+        // optHc.xAxis.startOnTick = true
+        // optHc.xAxis.endOnTick = true
+        optHc.xAxis.tickWidth = 0
+        // optHc.xAxis.gridLineWidth = 0
+        // optHc.xAxis.minorGridLineWidth = 0
+        optHc.xAxis.min = -0.25
+        // optHc.xAxis.max = size(categories) - 1 - 0.25
+        optHc.xAxis.tickInterval = 1
+        // optHc.xAxis.tickAmount = size(categories)
+        // optHc.xAxis.tickPositions = range(-1, size(categories))
+        // optHc.xAxis.tickPosition = 'outside'
+        optHc.xAxis.plotLines = [ //因highcharts的tick是between, 且min設定-0.25, 故無法繪製位置-0.5的gridLine, 得另外補畫
+            {
+                color: optHc.xAxis.gridLineColor,
+                width: optHc.xAxis.gridLineWidth,
+                value: -0.5,
+                // dashStyle: 'LongDash',
+                // zIndex: 1,
+            },
+        ]
+    }
+
     //column
     if (true) {
         optHc.plotOptions = {
@@ -284,7 +331,7 @@ function genBarOpt(width, height, keys, rds, optPlot = {}) {
         // console.log('optHc(column)', optHc)
     }
 
-    //legend
+    //legend, 會使用margin故放最後
     if (true) {
 
         //setLegendLoc

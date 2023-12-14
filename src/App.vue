@@ -38,6 +38,10 @@
 
             <AppZoneWRose v-if="cmpPick==='WRose'"></AppZoneWRose>
 
+            <AppZoneWSetOne v-if="cmpPick==='WSetOne'"></AppZoneWSetOne>
+
+            <AppZoneWSetMulti v-if="cmpPick==='WSetMulti'"></AppZoneWSetMulti>
+
         </div>
 
 
@@ -55,6 +59,8 @@ import AppZoneWPlot from './AppZoneWPlot.vue'
 import AppZoneWBar from './AppZoneWBar.vue'
 import AppZoneWPie from './AppZoneWPie.vue'
 import AppZoneWRose from './AppZoneWRose.vue'
+import AppZoneWSetOne from './AppZoneWSetOne.vue'
+import AppZoneWSetMulti from './AppZoneWSetMulti.vue'
 
 
 export default {
@@ -64,6 +70,8 @@ export default {
         AppZoneWBar,
         AppZoneWPie,
         AppZoneWRose,
+        AppZoneWSetOne,
+        AppZoneWSetMulti,
     },
     data: function() {
         return {
@@ -78,6 +86,8 @@ export default {
                 'WBar',
                 'WPie',
                 'WRose',
+                'WSetOne',
+                'WSetMulti',
             ],
 
             cmpPick: 'WPlot',

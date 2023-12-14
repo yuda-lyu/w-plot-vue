@@ -572,6 +572,25 @@
             <div class="bk">
                 <demolink
                     :kbname="'w-bar'"
+                    :casename="'horizontal & one-set & barUseInnerLabelsForHorizontal'"
+                ></demolink>
+
+                <w-bar
+                    :opt="{
+                        ...WBar.opt1a,
+                        direction:'horizontal',
+                        marginLeft:80,
+                        legendPosition:'bottomright',
+                        barUseInnerLabelsForHorizontal:true,
+                    }"
+                ></w-bar>
+
+            </div>
+
+
+            <div class="bk">
+                <demolink
+                    :kbname="'w-bar'"
                     :casename="'horizontal & one-set & barWidthRatio'"
                 ></demolink>
 
@@ -809,6 +828,28 @@
                         legendPosition:'bottomright',
                         barShowLabels:false,
                         showLegend:true,
+                    }"
+                ></w-bar>
+
+            </div>
+
+
+            <div class="bk">
+                <demolink
+                    :kbname="'w-bar'"
+                    :casename="'horizontal & multi-set & barUseInnerLabelsForHorizontal & barGroupWidthRatio'"
+                ></demolink>
+
+                <w-bar
+                    :opt="{
+                        ...WBar.opt2a,
+                        direction:'horizontal',
+                        marginLeft:80,
+                        legendPosition:'bottomright',
+                        barShowLabels:false,
+                        showLegend:true,
+                        barUseInnerLabelsForHorizontal:true,
+                        barGroupWidthRatio:0.25,
                     }"
                 ></w-bar>
 
@@ -1153,7 +1194,7 @@ export default {
     props: {
     },
     data: function() {
-        let keys1 = ['USA', 'China', 'Brazil', 'EU', 'India', 'Russia']
+        let keys = ['USA', 'China', 'Brazil', 'EU', 'India', 'Russia']
         let rds1a = [
             {
                 name: 'Corn',
@@ -1381,7 +1422,7 @@ export default {
                 'opt1a': {
                     width: 400,
                     height: 400,
-                    keys: keys1,
+                    keys,
                     rds: rds1a,
                     xTitle: 'Countries',
                     yTitle: 'Weight (MT)',
@@ -1389,7 +1430,7 @@ export default {
                 'opt1b': {
                     width: 400,
                     height: 400,
-                    keys: keys1,
+                    keys,
                     rds: rds1b,
                     xTitle: 'Countries',
                     yTitle: 'Weight (MT)',
@@ -1397,7 +1438,7 @@ export default {
                 'opt1c': {
                     width: 400,
                     height: 400,
-                    keys: keys1,
+                    keys,
                     rds: rds1c,
                     xTitle: 'Countries',
                     yTitle: 'Weight (MT)',
@@ -1405,7 +1446,7 @@ export default {
                 'opt2a': {
                     width: 400,
                     height: 400,
-                    keys: keys1,
+                    keys,
                     rds: rds2a,
                     xTitle: 'Countries',
                     yTitle: 'Weight (MT)',
@@ -1413,7 +1454,7 @@ export default {
                 'opt2b': {
                     width: 400,
                     height: 400,
-                    keys: keys1,
+                    keys,
                     rds: rds2b,
                     xTitle: 'Countries',
                     yTitle: 'Weight (MT)',
@@ -1421,7 +1462,7 @@ export default {
                 'opt2c': {
                     width: 400,
                     height: 400,
-                    keys: keys1,
+                    keys,
                     rds: rds2c,
                     xTitle: 'Countries',
                     yTitle: 'Weight (MT)',
@@ -1429,7 +1470,7 @@ export default {
                 'opt2d': {
                     width: 400,
                     height: 400,
-                    keys: keys1,
+                    keys,
                     rds: rds2d,
                     xTitle: 'Countries',
                     yTitle: 'Weight (MT)',
@@ -1437,7 +1478,7 @@ export default {
                 'opt2e': {
                     width: 400,
                     height: 400,
-                    keys: keys1,
+                    keys,
                     rds: rds2e,
                     xTitle: 'Countries',
                     yTitle: 'Weight (MT)',

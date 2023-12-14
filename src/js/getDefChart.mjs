@@ -13,7 +13,7 @@ function getDefChart(opt = {}) {
     let marginLeftShift = get(opt, 'marginLeftShift', 60)
     let marginRightShift = get(opt, 'marginRightShift', 0)
     let marginTopShift = get(opt, 'marginTopShift', 10)
-    let marginBottomShift = get(opt, 'marginBottomShift', 50)
+    let marginBottomShift = get(opt, 'marginBottomShift', 60)
 
     //spacingLeft
     let spacingLeft = get(opt, 'spacingLeft', 0)
