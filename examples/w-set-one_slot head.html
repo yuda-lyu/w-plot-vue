@@ -1,0 +1,196 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-tw">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>w-plot-vue</title>
+
+    <!-- @babel/polyfill -->
+    <script
+        nomodule
+        src="https://cdn.jsdelivr.net/npm/@babel/polyfill/dist/polyfill.min.js"
+    ></script>
+
+    <!-- vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.min.js"></script>
+
+    <!-- extractHtml已自動添加@babel/polyfill與vue -->
+
+    <!-- fontawesome -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css"
+        rel="stylesheet"
+    />
+
+    <!-- mdi, 各組件使用mdi/js會於轉單頁時改為mdi icon, 故需引用mdi/css -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css"
+        rel="stylesheet"
+    />
+
+    <!-- google, 各組件使用mdi/js故不需引用 -->
+    <link
+        _href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
+        rel="stylesheet"
+    />
+    <link
+        _href="https://fonts.googleapis.com/css?family=Material+Icons"
+        rel="stylesheet"
+    />
+
+    <!-- data -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/w-demores@1.0.23/res/data/dataAAPL.js"
+    ></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/w-demores@1.0.23/res/data/dataUSD2EUR.js"
+    ></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/w-demores@1.0.23/res/data/dataTemperature.js"
+    ></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/w-demores@1.0.23/res/data/dataHousePriceArea.js"
+    ></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/w-demores@1.0.23/res/data/dataFlare.js"
+    ></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/w-demores@1.0.23/res/data/dataRain.js"
+    ></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/w-demores@1.0.23/res/data/dataRainClip.js"
+    ></script>
+
+    <!-- w-plot-vue -->
+    <script src="https://cdn.jsdelivr.net/npm/w-plot-vue@1.0.1/dist/w-plot-vue.umd.js"></script>
+
+    <style>
+  .v-application--wrap {
+    /* width與max-width fix for IE11, 其外不能使用padding或margin避免失效 */
+    width: 100vw;
+    max-width: 100vw;
+    font-family: inherit;
+    background: #fff;
+  }
+  .item {
+    /* 因item位於demolink, 提取各範例html後會刪除demolink, 故得額外補上 */
+    border-left: 3px solid #ffba75;
+    margin: 5px 5px 8px 0px;
+    padding: 3px 3px 5px 10px;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .head1 {
+    margin: 0px;
+    padding: 0px 0px 20px 0px;
+    font-size: 2.5rem;
+  }
+  .bk {
+    vertical-align: top;
+    padding: 10px 0px 60px 0px;
+  }
+  @media screen and (min-width: 1000px) {
+    /* 寬版 */
+    .bk {
+      display: inline-block;
+      margin: 0px 80px 0px 0px;
+    }
+  }
+    </style>
+</head>
+<body
+    style="font-family:'Microsoft JhengHei','Avenir','Helvetica'; padding:0px; margin:0px;"
+>
+    <v-app id="app" style="font-family:inherit; padding:0px 30px;">
+        <div class="head1">
+            <span
+                style="cursor:pointer;"
+                title="open for copy link to view component"
+                onclick="window.open('//yuda-lyu.github.io/w-plot-vue/examples/app.html?cmp='+this.innerText,'_blank')"
+            >w-set-one</span>
+        </div>
+        <div class="bk">
+            <div class="item">slot head</div>
+
+            <w-set-one
+                :opt="{
+                        ...WSetOne.opt1c,
+                    }"
+            >
+                <template v-slot:head>
+                    <div style="padding-right:8px; font-size:1.3rem;">🌿</div>
+                </template>
+            </w-set-one>
+        </div>
+    </v-app>
+
+    <script>
+  //install
+  Vue.use(window["w-plot-vue"]);
+
+  //initialize
+  new Vue({
+    el: "#app",
+
+    data: function() {
+      let keys = ["USA", "China", "Brazil", "EU", "India", "Russia"];
+      let rds1c = [
+        {
+          name: "Corn",
+          data: {
+            USA: {
+              value: 406.292,
+              color: ["#EF9A9A", "#F44336"]
+            },
+            China: {
+              value: 260.0,
+              color: ["#F48FB1", "#E91E63"]
+            },
+            Brazil: {
+              value: 107.0,
+              color: ["#CE93D8", "#9C27B0"]
+            },
+            EU: {
+              value: 68.3,
+              color: ["#B39DDB", "#673AB7"]
+            },
+            India: {
+              value: 27.5,
+              color: ["#9FA8DA", "#3F51B5"]
+            },
+            Russia: {
+              value: 14.5,
+              color: ["#90CAF9", "#2196F3"]
+            }
+          }
+        }
+      ];
+      return {
+        WSetOne: {
+          keySelect: "bar-v-normal",
+          opt1c: {
+            width: 400,
+            height: 400,
+            keys,
+            rds: rds1c,
+            xTitle: "Countries",
+            yTitle: "Weight (MT)"
+          }
+        }
+      };
+    },
+    mounted: function() {
+      return {};
+    },
+    computed: {},
+    methods: {}
+  });
+    </script>
+</body>
+</html>

@@ -66,7 +66,7 @@
     ></script>
 
     <!-- w-plot-vue -->
-    <script src="https://cdn.jsdelivr.net/npm/w-plot-vue@1.0.0/dist/w-plot-vue.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/w-plot-vue@1.0.1/dist/w-plot-vue.umd.js"></script>
 
     <style>
   .v-application--wrap {
@@ -136,7 +136,7 @@
     el: "#app",
 
     data: function() {
-      let keys1 = ["USA", "China", "Brazil", "EU", "India", "Russia"];
+      let keys = ["USA", "China", "Brazil", "EU", "India", "Russia"];
       let rds1a = [
         {
           name: "Corn",
@@ -413,7 +413,7 @@
           opt1a: {
             width: 400,
             height: 400,
-            keys: keys1,
+            keys,
             rds: rds1a,
             xTitle: "Countries",
             yTitle: "Weight (MT)"
@@ -421,7 +421,7 @@
           opt1b: {
             width: 400,
             height: 400,
-            keys: keys1,
+            keys,
             rds: rds1b,
             xTitle: "Countries",
             yTitle: "Weight (MT)"
@@ -429,7 +429,7 @@
           opt1c: {
             width: 400,
             height: 400,
-            keys: keys1,
+            keys,
             rds: rds1c,
             xTitle: "Countries",
             yTitle: "Weight (MT)"
@@ -437,7 +437,7 @@
           opt2a: {
             width: 400,
             height: 400,
-            keys: keys1,
+            keys,
             rds: rds2a,
             xTitle: "Countries",
             yTitle: "Weight (MT)"
@@ -445,7 +445,7 @@
           opt2b: {
             width: 400,
             height: 400,
-            keys: keys1,
+            keys,
             rds: rds2b,
             xTitle: "Countries",
             yTitle: "Weight (MT)"
@@ -453,7 +453,7 @@
           opt2c: {
             width: 400,
             height: 400,
-            keys: keys1,
+            keys,
             rds: rds2c,
             xTitle: "Countries",
             yTitle: "Weight (MT)"
@@ -461,7 +461,7 @@
           opt2d: {
             width: 400,
             height: 400,
-            keys: keys1,
+            keys,
             rds: rds2d,
             xTitle: "Countries",
             yTitle: "Weight (MT)"
@@ -469,7 +469,7 @@
           opt2e: {
             width: 400,
             height: 400,
-            keys: keys1,
+            keys,
             rds: rds2e,
             xTitle: "Countries",
             yTitle: "Weight (MT)"
