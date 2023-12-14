@@ -14,15 +14,16 @@
 
         <div style="background:#f5f5f5;">
 
-            <div style="width:calc( 100vw - 20px ); overflow-x:auto;" v-if="cmpsL1">
+            <div style="width:calc( 100vw - 20px ); overflow-x:auto;" v-if="cmpsL1 && cmpsL1.length>0">
                 <WListHorizontal
                     :items="cmpsL1"
                     :itemActive.sync="cmpP1"
                     :itemBackgroundColor="'transparent'"
-                    :itemBackgroundColorHover="'transparent'"
-                    :itemBackgroundColorActive="'transparent'"
+                    :itemBackgroundColorHover="'#eee'"
+                    :itemBackgroundColorActive="'#eee'"
                     :keyText="'name'"
-                    @update:itemActive="(v)=>{indP2=0;indP1=getInd(v,cmpsL1)}"
+                    :paddingStyle="{v:12,h:20}"
+                    @update:itemActive="(v)=>{indP3=0;indP2=0;indP1=getInd(v,cmpsL1)}"
                 >
                     <template v-slot:item="props">
                         <div style="">
@@ -30,17 +31,21 @@
                         </div>
                     </template>
                 </WListHorizontal>
+                <div style="height:1px; background:#ddd;"></div>
             </div>
 
-            <div style="width:calc( 100vw - 20px ); overflow-x:auto;" v-if="cmpsL2">
+
+            <div style="width:calc( 100vw - 20px ); overflow-x:auto;" v-if="cmpsL2 && cmpsL2.length>0">
+                <div style="height:3px; background:#fff;"></div>
                 <WListHorizontal
                     :items="cmpsL2"
                     :itemActive.sync="cmpP2"
                     :itemBackgroundColor="'transparent'"
-                    :itemBackgroundColorHover="'transparent'"
-                    :itemBackgroundColorActive="'transparent'"
+                    :itemBackgroundColorHover="'#eee'"
+                    :itemBackgroundColorActive="'#eee'"
                     :keyText="'name'"
-                    @update:itemActive="(v)=>{indP2=getInd(v,cmpsL2)}"
+                    :paddingStyle="{v:12,h:20}"
+                    @update:itemActive="(v)=>{indP3=0;indP2=getInd(v,cmpsL2)}"
                 >
                     <template v-slot:item="props">
                         <div style="">
@@ -48,16 +53,19 @@
                         </div>
                     </template>
                 </WListHorizontal>
+                <div style="height:1px; background:#ddd;"></div>
             </div>
 
-            <div style="width:calc( 100vw - 20px ); overflow-x:auto;" v-if="cmpsL3">
+            <div style="width:calc( 100vw - 20px ); overflow-x:auto;" v-if="cmpsL3 && cmpsL3.length>0">
+                <div style="height:3px; background:#fff;"></div>
                 <WListHorizontal
                     :items="cmpsL3"
                     :itemActive.sync="cmpP3"
                     :itemBackgroundColor="'transparent'"
-                    :itemBackgroundColorHover="'transparent'"
-                    :itemBackgroundColorActive="'transparent'"
+                    :itemBackgroundColorHover="'#eee'"
+                    :itemBackgroundColorActive="'#eee'"
                     :keyText="'name'"
+                    :paddingStyle="{v:12,h:20}"
                     @update:itemActive="(v)=>{indP3=getInd(v,cmpsL3)}"
                 >
                     <template v-slot:item="props">
@@ -66,6 +74,7 @@
                         </div>
                     </template>
                 </WListHorizontal>
+                <div style="height:1px; background:#ddd;"></div>
             </div>
 
         </div>
