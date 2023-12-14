@@ -1,5 +1,8 @@
 <template>
-    <div style="">
+    <div
+        style=""
+        :changeMenus="changeMenus"
+    >
 
 
         <template v-if="!isNarrow">
@@ -10,21 +13,61 @@
 
 
         <div style="background:#f5f5f5;">
-            <div style="width:calc( 100vw - 20px ); overflow-x:auto;">
+
+            <div style="width:calc( 100vw - 20px ); overflow-x:auto;" v-if="cmpsL1">
                 <WListHorizontal
-                    :items="cmps"
-                    :itemActive.sync="cmpPick"
+                    :items="cmpsL1"
+                    :itemActive.sync="cmpP1"
                     :itemBackgroundColor="'transparent'"
                     :itemBackgroundColorHover="'transparent'"
                     :itemBackgroundColorActive="'transparent'"
+                    :keyText="'name'"
+                    @update:itemActive="(v)=>{indP2=0;indP1=getInd(v,cmpsL1)}"
                 >
                     <template v-slot:item="props">
-                        <div style="display:flex; align-items:center;">
-                            {{kebabCase(props.item)}}
+                        <div style="">
+                            {{kebabCase(props.item.name)}}
                         </div>
                     </template>
                 </WListHorizontal>
             </div>
+
+            <div style="width:calc( 100vw - 20px ); overflow-x:auto;" v-if="cmpsL2">
+                <WListHorizontal
+                    :items="cmpsL2"
+                    :itemActive.sync="cmpP2"
+                    :itemBackgroundColor="'transparent'"
+                    :itemBackgroundColorHover="'transparent'"
+                    :itemBackgroundColorActive="'transparent'"
+                    :keyText="'name'"
+                    @update:itemActive="(v)=>{indP2=getInd(v,cmpsL2)}"
+                >
+                    <template v-slot:item="props">
+                        <div style="">
+                            {{kebabCase(props.item.name)}}
+                        </div>
+                    </template>
+                </WListHorizontal>
+            </div>
+
+            <div style="width:calc( 100vw - 20px ); overflow-x:auto;" v-if="cmpsL3">
+                <WListHorizontal
+                    :items="cmpsL3"
+                    :itemActive.sync="cmpP3"
+                    :itemBackgroundColor="'transparent'"
+                    :itemBackgroundColorHover="'transparent'"
+                    :itemBackgroundColorActive="'transparent'"
+                    :keyText="'name'"
+                    @update:itemActive="(v)=>{indP3=getInd(v,cmpsL3)}"
+                >
+                    <template v-slot:item="props">
+                        <div style="">
+                            {{kebabCase(props.item.name)}}
+                        </div>
+                    </template>
+                </WListHorizontal>
+            </div>
+
         </div>
 
 
@@ -49,11 +92,11 @@
 </template>
 
 <script>
-// import { mdiCheckCircle, mdiCheckboxBlankCircleOutline } from '@mdi/js'
-// import get from 'lodash-es/get'
+import get from 'lodash-es/get'
 import kebabCase from 'lodash-es/kebabCase'
-// import each from 'lodash-es/each'
-// import urlParse from 'wsemi/src/urlParse.mjs'
+import each from 'lodash-es/each'
+// import cloneDeep from 'lodash-es/cloneDeep'
+import urlParse from 'wsemi/src/urlParse.mjs'
 import WListHorizontal from 'w-component-vue/src/components/WListHorizontal.vue'
 import AppZoneWPlot from './AppZoneWPlot.vue'
 import AppZoneWBar from './AppZoneWBar.vue'
@@ -74,30 +117,76 @@ export default {
         AppZoneWSetMulti,
     },
     data: function() {
+        let cmps = [
+            {
+                name: 'basic',
+                cmps: [
+                    { name: 'WPlot', },
+                    { name: 'WBar', },
+                    { name: 'WPie', },
+                    { name: 'WRose', },
+                ],
+            },
+            {
+                name: 'set',
+                cmps: [
+                    { name: 'WSetOne', },
+                    { name: 'WSetMulti', },
+                    // {
+                    //     name: 'VTest',
+                    //     cmps: [
+                    //         { name: 'VTest1', },
+                    //         { name: 'VTest2', },
+                    //         { name: 'VTest3', },
+                    //     ],
+                    // },
+                ],
+            },
+        ]
         return {
-            // get,
             kebabCase,
 
-            // mdiCheckCircle,
-            // mdiCheckboxBlankCircleOutline,
+            cmpsL1: cmps,
+            indP1: null,
+            cmpP1: null,
 
-            cmps: [
-                'WPlot',
-                'WBar',
-                'WPie',
-                'WRose',
-                'WSetOne',
-                'WSetMulti',
-            ],
+            cmpsL2: null,
+            indP2: null,
+            cmpP2: null,
 
-            cmpPick: 'WPlot',
+            cmpsL3: null,
+            indP3: null,
+            cmpP3: null,
+
+            cmpsL4: null,
+
+            cmpPick: '',
 
         }
     },
     mounted: function() {
         let vo = this
+
+        //default
+        vo.indP1 = 0
+        vo.indP2 = 0
+        vo.indP3 = 0
+
+        //urlParse, http://localhost:8080/?cmp=w-pie
+        let p = urlParse(location.href)
+        // console.log('p', p)
+
+        //viewPick
+        vo.viewPick(get(p, 'cmp', ''))
+
     },
     computed: {
+
+        changeMenus: function() {
+            let vo = this
+            vo.modifyMenus(vo.indP1, vo.indP2, vo.indP3)
+            return ''
+        },
 
         isNarrow: function() {
             return window.innerWidth < 1000
@@ -105,6 +194,111 @@ export default {
 
     },
     methods: {
+
+        modifyMenus: function() {
+            let vo = this
+
+            let cmpPick = ''
+
+            setTimeout(() => {
+
+                // console.log('call P1')
+                vo.cmpP1 = get(vo.cmpsL1, vo.indP1, {})
+                vo.cmpsL2 = get(vo.cmpP1, `cmps`, [])
+                let _cmpPick = get(vo.cmpP1, `name`, '')
+                if (_cmpPick) {
+                    cmpPick = _cmpPick
+                }
+                // console.log('vo.cmpP1', cloneDeep(vo.cmpP1))
+                // console.log('vo.cmpsL2', cloneDeep(vo.cmpsL2))
+
+            }, 50)
+
+            setTimeout(() => {
+
+                // console.log('call P2')
+                let cmps = get(vo.cmpP1, `cmps`, [])
+                vo.cmpP2 = get(cmps, vo.indP2, {})
+                vo.cmpsL3 = get(vo.cmpP2, `cmps`, [])
+                let _cmpPick = get(vo.cmpP2, `name`, '')
+                if (_cmpPick) {
+                    cmpPick = _cmpPick
+                }
+                // console.log('vo.cmpP2', cloneDeep(vo.cmpP2))
+                // console.log('vo.cmpsL3', cloneDeep(vo.cmpsL3))
+
+            }, 100)
+
+            setTimeout(() => {
+
+                // console.log('call P3')
+                let cmps = get(vo.cmpP2, `cmps`, [])
+                vo.cmpP3 = get(cmps, vo.indP3, {})
+                vo.cmpsL4 = get(vo.cmpP3, `cmps`, [])
+                let _cmpPick = get(vo.cmpP3, `name`, '')
+                if (_cmpPick) {
+                    cmpPick = _cmpPick
+                }
+                // console.log('vo.cmpP3', cloneDeep(vo.cmpP3))
+                // console.log('vo.cmpsL4', cloneDeep(vo.cmpsL4))
+
+                //update
+                vo.cmpPick = cmpPick
+                // console.log('cmpPick', cmpPick)
+
+            }, 150)
+
+        },
+
+        getInd: function(item, items) {
+            // let vo = this
+            let ind = -1
+            each(items, (v, k) => {
+                if (item.name === v.name) {
+                    ind = k
+                    return false //跳出
+                }
+            })
+            return ind
+        },
+
+        viewPick: function(cmpPick) {
+            let vo = this
+            let _cmpPick = kebabCase(cmpPick)
+            let r = ''
+            let rs = []
+            let ls = []
+            let l = 0
+            let pv = (ts) => {
+                each(ts, (v, k) => {
+                    let name = get(v, `name`, '')
+                    let _name = kebabCase(name)
+                    let cmps = get(v, `cmps`, [])
+                    if (cmps.length > 0) {
+                        ls.push(l)
+                        l++
+                        pv(cmps)
+                        l--
+                        ls.pop()
+                    }
+                    let lst = [...ls, k]
+                    rs.push({
+                        clst: lst.join('.'),
+                        name,
+                    })
+                    if (_name === _cmpPick) {
+                        r = lst
+                    }
+                })
+            }
+            pv(vo.cmpsL1)
+            // console.log('rs', rs)
+            // console.log('r', r)
+            vo.indP1 = get(r, 0, 0)
+            vo.indP2 = get(r, 1, 0)
+            vo.indP3 = get(r, 2, 0)
+        },
+
     },
 }
 </script>
