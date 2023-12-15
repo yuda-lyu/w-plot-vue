@@ -181,7 +181,7 @@ export default {
         vo.indP2 = 0
         vo.indP3 = 0
 
-        //urlParse, http://localhost:8080/?cmp=w-pie
+        //urlParse, http://localhost:8080/?cmp=w-set-multi
         let p = urlParse(location.href)
         // console.log('p', p)
 
@@ -279,16 +279,15 @@ export default {
             let ls = []
             let l = 0
             let pv = (ts) => {
+                ls.push(l)
                 each(ts, (v, k) => {
                     let name = get(v, `name`, '')
                     let _name = kebabCase(name)
                     let cmps = get(v, `cmps`, [])
                     if (cmps.length > 0) {
-                        ls.push(l)
                         l++
                         pv(cmps)
                         l--
-                        ls.pop()
                     }
                     let lst = [...ls, k]
                     rs.push({
@@ -299,13 +298,14 @@ export default {
                         r = lst
                     }
                 })
+                ls.pop()
             }
             pv(vo.cmpsL1)
             // console.log('rs', rs)
             // console.log('r', r)
-            vo.indP1 = get(r, 0, 0)
-            vo.indP2 = get(r, 1, 0)
-            vo.indP3 = get(r, 2, 0)
+            vo.indP1 = get(r, 1, 0)
+            vo.indP2 = get(r, 2, 0)
+            vo.indP3 = get(r, 3, 0)
         },
 
     },
