@@ -277,35 +277,45 @@ export default {
             let r = ''
             let rs = []
             let ls = []
-            let l = 0
             let pv = (ts) => {
-                ls.push(l)
                 each(ts, (v, k) => {
+                    ls.push(k)
+
+                    //name, _name
                     let name = get(v, `name`, '')
                     let _name = kebabCase(name)
+
+                    //cmps
                     let cmps = get(v, `cmps`, [])
-                    if (cmps.length > 0) {
-                        l++
-                        pv(cmps)
-                        l--
-                    }
-                    let lst = [...ls, k]
+
+                    //push
+                    let cls = ls.join('.')
+                    let b = _name === _cmpPick
                     rs.push({
-                        clst: lst.join('.'),
+                        cls,
                         name,
+                        b,
                     })
-                    if (_name === _cmpPick) {
-                        r = lst
+
+                    //save
+                    if (b) {
+                        r = JSON.parse(JSON.stringify(ls))
                     }
+
+                    //遞迴pv
+                    if (cmps.length > 0) {
+                        pv(cmps)
+                    }
+
+                    ls.pop()
                 })
-                ls.pop()
             }
             pv(vo.cmpsL1)
             // console.log('rs', rs)
             // console.log('r', r)
-            vo.indP1 = get(r, 1, 0)
-            vo.indP2 = get(r, 2, 0)
-            vo.indP3 = get(r, 3, 0)
+            vo.indP1 = get(r, 0, 0)
+            vo.indP2 = get(r, 1, 0)
+            vo.indP3 = get(r, 2, 0)
         },
 
     },
