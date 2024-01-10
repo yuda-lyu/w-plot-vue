@@ -11,9 +11,9 @@
             ></slot>
         </div>
 
-        <WPlot
+        <WPlot2d
             :options="optRose"
-        ></WPlot>
+        ></WPlot2d>
 
         <div :style="`width:${picWidth}px; max-width:${picWidth}px;`">
             <slot
@@ -31,7 +31,7 @@ import get from 'lodash-es/get'
 // import cloneDeep from 'lodash-es/cloneDeep'
 // import isestr from 'wsemi/src/isestr.mjs'
 import iseobj from 'wsemi/src/iseobj.mjs'
-import WPlot from './WPlot.vue'
+import WPlot2d from './WPlot2d.vue'
 import genRoseOpt from '../js/genRoseOpt.mjs'
 
 
@@ -40,7 +40,7 @@ import genRoseOpt from '../js/genRoseOpt.mjs'
  */
 export default {
     components: {
-        WPlot,
+        WPlot2d,
     },
     props: {
         opt: {

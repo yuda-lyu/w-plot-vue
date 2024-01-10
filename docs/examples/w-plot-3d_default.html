@@ -123,25 +123,12 @@
                 style="cursor:pointer;"
                 title="open for copy link to view component"
                 onclick="window.open('//yuda-lyu.github.io/w-plot-vue/examples/app.html?cmp='+this.innerText,'_blank')"
-            >w-set-one</span>
+            >w-plot-3d</span>
         </div>
         <div class="bk">
-            <div class="item">textPlotType &amp; kpSelectText &amp; widthSelect</div>
+            <div class="item">default</div>
 
-            <w-set-one
-                :opt="{
-                        ...WSetOne.opt1c,
-                    }"
-                :text-plot-type="'繪圖類型'"
-                :kp-select-text="{
-                        'bar-v-normal':'垂直直條圖',
-                        'bar-h-normal':'水平直條圖',
-                        'bar-h-normal-dense':'水平直條圖(緊密)',
-                        'pie-normal':'圓餅圖',
-                        'rose-normal':'玫瑰圖',
-                    }"
-                :width-select="160"
-            ></w-set-one>
+            <w-plot-3d :options="WPlot3d.option1"></w-plot-3d>
         </div>
     </div>
 
@@ -154,48 +141,59 @@
     el: "#app",
 
     data: function() {
-      let keys = ["USA", "China", "Brazil", "EU", "India", "Russia"];
-      let rds1c = [
-        {
-          name: "Corn",
-          data: {
-            USA: {
-              value: 406.292,
-              color: ["#EF9A9A", "#F44336"]
-            },
-            China: {
-              value: 260.0,
-              color: ["#F48FB1", "#E91E63"]
-            },
-            Brazil: {
-              value: 107.0,
-              color: ["#CE93D8", "#9C27B0"]
-            },
-            EU: {
-              value: 68.3,
-              color: ["#B39DDB", "#673AB7"]
-            },
-            India: {
-              value: 27.5,
-              color: ["#9FA8DA", "#3F51B5"]
-            },
-            Russia: {
-              value: 14.5,
-              color: ["#90CAF9", "#2196F3"]
-            }
-          }
-        }
-      ];
       return {
-        WSetOne: {
-          keySelect: "bar-v-normal",
-          opt1c: {
-            width: 400,
-            height: 400,
-            keys,
-            rds: rds1c,
-            xTitle: "Countries",
-            yTitle: "Weight (MT)"
+        WPlot3d: {
+          option1: {
+            width: 600,
+            height: 600,
+            items: [
+              // {
+              //     url:'./3d_block.stl',
+              //     name:'block',
+              //     color:'#fff', //{ h: 320, s: 0.2, l: 0.15 }
+              // },
+              // {
+              //     url:'./3D_Domain(ascii).stl',
+              //     name:'testerA',
+              //     color:'#fff', //{ h: 320, s: 0.2, l: 0.15 }
+              // },
+              {
+                url: "./topo_surface.stl",
+                name: "Surface",
+                color: "#d65c5c",
+                opacity: 0.9
+              },
+              {
+                url: "./A.stl",
+                name: "A",
+                color: "#d6d65c",
+                opacity: 0.9
+              },
+              {
+                url: "./B.stl",
+                name: "B",
+                color: "#5cd65c",
+                opacity: 0.9
+              },
+              {
+                url: "./C.stl",
+                name: "C",
+                color: "#5cd6d6",
+                opacity: 0.9
+              },
+              {
+                url: "./D.stl",
+                name: "D",
+                color: "#5c5cd6",
+                opacity: 0.9
+              },
+              {
+                url: "./E.stl",
+                name: "E",
+                color: "#d65cd6",
+                opacity: 0.9
+              }
+            ]
           }
         }
       };

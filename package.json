@@ -5,8 +5,10 @@
   "dependencies": {
     "@mdi/js": "^7.2.96",
     "lodash-es": "^4.17.21",
-    "w-component-vue": "^2.3.63",
-    "wsemi": "^1.7.40"
+    "three": "^0.159.0",
+    "camera-controls": "^2.7.3",
+    "w-component-vue": "^2.3.74",
+    "wsemi": "^1.7.41"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^5.0.8",
@@ -22,7 +24,7 @@
     "eslint-plugin-standard": "^4.1.0",
     "eslint-plugin-vue": "^9.10.0",
     "vue": "^2.6.14",
-    "w-package-tools": "^1.0.71"
+    "w-package-tools": "^1.0.72"
   },
   "scripts": {
     "serve": "vue-cli-service serve",

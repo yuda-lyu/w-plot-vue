@@ -27,9 +27,9 @@ npm i w-plot-vue
 Import all components:
 ```alias
 //choose component
-<w-plot
+<w-plot-2d
     ...
-></w-plot>
+></w-plot-2d>
 
 //import
 import WPlotVue from 'w-plot-vue'
@@ -40,21 +40,21 @@ Vue.use(WPlotVue)
 Import one component:
 ```alias
 //choose component
-<w-plot
+<w-plot-2d
     ...
-></w-plot>
+></w-plot-2d>
 
 //import
-import WPlot from 'w-plot-vue/src/components/WPlot.vue'
+import WPlot2d from 'w-plot-vue/src/components/WPlot2d.vue'
 
 //component
-Vue.component('w-plot',WPlot)
+Vue.component('w-plot-2d',WPlot2d)
 //or
 export default {
     components: {
-        WPlot,
+        WPlot2d,
         //or
-        'w-plot': WPlot,
+        'w-plot-2d': WPlot2d,
     },
     ...
 }
@@ -71,9 +71,9 @@ Directly use:
 ```alias
 //app and component
 <div id="app">
-    <w-plot
+    <w-plot-2d
         ...
-    ></w-plot>
+    ></w-plot-2d>
 </div>
 
 //use

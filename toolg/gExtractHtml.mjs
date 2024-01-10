@@ -98,13 +98,6 @@ function writeHtml(v) {
         <script src="../dist/w-plot-vue.umd.js"></script>
     
         <style>
-            .v-application--wrap {
-                /* width與max-width fix for IE11, 其外不能使用padding或margin避免失效 */
-                width: 100vw;
-                max-width: 100vw;
-                font-family: inherit;
-                background: #fff;
-            }
             .item { /* 因item位於demolink, 提取各範例html後會刪除demolink, 故得額外補上 */
                 border-left: 3px solid #ffba75;
                 margin: 5px 5px 8px 0px;
@@ -115,25 +108,39 @@ function writeHtml(v) {
                 align-items: center;
             }
             .head1 {
-                margin: 0px;
                 padding: 0px 0px 20px 0px;
                 font-size: 2.5rem;
             }
-            .bk {
-                vertical-align: top;
-                padding: 10px 0px 60px 0px;
+            .bkh { /* 寬 */
+                padding:20px;
             }
-            @media screen and (min-width:1000px){ /* 寬版 */
+            @media screen and (max-width:800px){ /* 中 */
+                .bkh {
+                    padding:10px;
+                }
+            }
+            @media screen and (max-width:400px){ /* 窄 */
+                .bkh {
+                    padding:5px;
+                }
+            }
+            .bk { /* 寬 */
+                display: inline-block;
+                vertical-align: top;
+                padding: 0px 80px 60px 0px;
+            }
+            @media screen and (max-width:1000px){ /* 中窄 */
                 .bk {
-                    display: inline-block;
-                    margin: 0px 80px 0px 0px;
+                    display: block;
+                    padding: 0px 0px 50px 0px;
                 }
             }
         </style>
     
         `,
-        appTag: `v-app`,
-        appStyle: `font-family:inherit; padding:0px 30px;`,
+        appTag: `div`,
+        appClass: `bkh`,
+        appStyle: ``,
         appTmp: getAppTmp(),
         installVue: `Vue.use(window['w-plot-vue'])`,
         data: v.data,

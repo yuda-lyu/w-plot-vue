@@ -13,9 +13,9 @@
 
         <div style="position:relative;">
 
-            <WPlot
+            <WPlot2d
                 :options="optBar"
-            ></WPlot>
+            ></WPlot2d>
 
             <template v-if="useInnerLabels">
                 <div
@@ -46,7 +46,7 @@ import size from 'lodash-es/size'
 // import cloneDeep from 'lodash-es/cloneDeep'
 // import isestr from 'wsemi/src/isestr.mjs'
 import iseobj from 'wsemi/src/iseobj.mjs'
-import WPlot from './WPlot.vue'
+import WPlot2d from './WPlot2d.vue'
 import genBarOpt from '../js/genBarOpt.mjs'
 
 
@@ -55,7 +55,7 @@ import genBarOpt from '../js/genBarOpt.mjs'
  */
 export default {
     components: {
-        WPlot,
+        WPlot2d,
     },
     props: {
         opt: {
