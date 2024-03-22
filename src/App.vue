@@ -174,12 +174,12 @@ export default {
                     },
                 ],
             },
-            {
-                name: '3d',
-                cmps: [
-                    { name: 'WPlot3d', },
-                ],
-            },
+            // {
+            //     name: '3d',
+            //     cmps: [
+            //         { name: 'WPlot3d', },
+            //     ],
+            // },
         ]
         return {
             kebabCaseFix,

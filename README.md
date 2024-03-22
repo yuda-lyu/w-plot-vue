@@ -7,6 +7,7 @@ A plot component for vue(vue2).
 [![license](https://img.shields.io/npm/l/w-plot-vue.svg?style=flat)](https://npmjs.org/package/w-plot-vue) 
 [![gzip file size](http://img.badgesize.io/yuda-lyu/w-plot-vue/master/dist/w-plot-vue.umd.js.svg?compression=gzip)](https://github.com/yuda-lyu/w-plot-vue)
 [![npm download](https://img.shields.io/npm/dt/w-plot-vue.svg)](https://npmjs.org/package/w-plot-vue) 
+[![npm download](https://img.shields.io/npm/dm/w-plot-vue.svg)](https://npmjs.org/package/w-plot-vue) 
 [![jsdelivr download](https://img.shields.io/jsdelivr/npm/hm/w-plot-vue.svg)](https://www.jsdelivr.com/package/npm/w-plot-vue)
 
 ## Documentation
@@ -65,7 +66,7 @@ export default {
 
 [Necessary] Add script for w-plot-vue.
 ```alias
-<script src="https://cdn.jsdelivr.net/npm/w-plot-vue@1.0.5/dist/w-plot-vue.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/w-plot-vue@1.0.6/dist/w-plot-vue.umd.js"></script>
 ```
 Directly use:
 ```alias
