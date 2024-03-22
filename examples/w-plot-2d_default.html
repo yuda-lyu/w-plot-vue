@@ -123,20 +123,12 @@
                 style="cursor:pointer;"
                 title="open for copy link to view component"
                 onclick="window.open('//yuda-lyu.github.io/w-plot-vue/examples/app.html?cmp='+this.innerText,'_blank')"
-            >w-set-multi</span>
+            >w-plot-2d</span>
         </div>
         <div class="bk">
-            <div class="item">slot head</div>
+            <div class="item">default</div>
 
-            <w-set-multi
-                :opt="{
-                        ...WSetMulti.opt2e,
-                    }"
-            >
-                <template v-slot:head>
-                    <div style="padding-right:8px; font-size:1.3rem;">🌿</div>
-                </template>
-            </w-set-multi>
+            <w-plot-2d :options="WPlot2d.option1"></w-plot-2d>
         </div>
     </div>
 
@@ -149,77 +141,34 @@
     el: "#app",
 
     data: function() {
-      let keys = ["USA", "China", "Brazil", "EU", "India", "Russia"];
-      let rds2e = [
-        {
-          name: "Corn",
-          data: {
-            USA: {
-              value: 406.292,
-              color: ["rgb(255, 205, 210)", "rgb(229, 115, 115)"]
-            },
-            China: {
-              value: 260.0,
-              color: ["rgb(255, 185, 210)", "rgb(229, 95, 115)"]
-            },
-            Brazil: {
-              value: 107.0,
-              color: ["rgb(255, 165, 210)", "rgb(229, 75, 115)"]
-            },
-            EU: {
-              value: 68.3,
-              color: ["rgb(255, 145, 210)", "rgb(229, 55, 115)"]
-            },
-            India: {
-              value: 27.5,
-              color: ["rgb(255, 125, 210)", "rgb(229, 35, 115)"]
-            },
-            Russia: {
-              value: 14.5,
-              color: ["rgb(255, 105, 210)", "rgb(229, 15, 115)"]
-            }
-          }
-        },
-        {
-          name: "Wheat",
-          data: {
-            USA: {
-              value: 51.086,
-              color: ["rgb(210, 205, 255)", "rgb(115, 115, 229)"]
-            },
-            China: {
-              value: 136.0,
-              color: ["rgb(210, 185, 255)", "rgb(115, 95, 229)"]
-            },
-            Brazil: {
-              value: 5.5,
-              color: ["rgb(210, 165, 255)", "rgb(115, 75, 229)"]
-            },
-            EU: {
-              value: 141.0,
-              color: ["rgb(210, 145, 255)", "rgb(115, 55, 229)"]
-            },
-            India: {
-              value: 107.18,
-              color: ["rgb(210, 125, 255)", "rgb(115, 35, 229)"]
-            },
-            Russia: {
-              value: 77.0,
-              color: ["rgb(210, 105, 255)", "rgb(115, 15, 229)"]
-            }
-          }
-        }
-      ];
       return {
-        WSetMulti: {
-          keySelect: "bar-v-normal",
-          opt2e: {
-            width: 400,
-            height: 400,
-            keys,
-            rds: rds2e,
-            xTitle: "Countries",
-            yTitle: "Weight (MT)"
+        WPlot2d: {
+          option1: {
+            title: {
+              text: "AAPL Stock Price"
+            },
+            xAxis: {
+              type: "datetime"
+            },
+            yAxis: {
+              title: {
+                text: "Price"
+              }
+            },
+            tooltip: {
+              headerFormat:
+                '<div style="font-size:8pt;">{point.x:%Y/%m/%d %H:%M}</div><br/>',
+              pointFormat: " Price: <b>{point.y}</b>"
+            },
+            series: [
+              {
+                name: "AAPL",
+                data: window.dataAAPL,
+                tooltip: {
+                  valueDecimals: 2
+                }
+              }
+            ]
           }
         }
       };

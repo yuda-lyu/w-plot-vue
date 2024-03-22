@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>getDefOpt.mjs - Documentation</title>
+    <title>WPlot2d - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -35,84 +35,163 @@
 
 <div id="main">
     
-    <h1 class="page-title">getDefOpt.mjs</h1>
+    <h1 class="page-title">WPlot2d</h1>
     
 
     
 
 
 
+
+<section>
+
+<header>
     
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>import get from 'lodash-es/get'
+</header>
+
+<article>
+    
+        <div class="container-overview">
+        
+            
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li></p></div></div> 
 
 
-/**
- * 產生預設Highcharts設定物件
- *
- * @param {Object} [opt={}] 輸入設定物件，預設{}
- * @returns {Object} 回傳物件
- */
-function getDefOpt(opt = {}) {
-
-    //useTooltip
-    let useTooltip = get(opt, 'useTooltip', true)
-
-    //useLegend
-    let useLegend = get(opt, 'useLegend', true)
-
-    let _opt = {
-
-        credits: {
-            enabled: false //不顯示highchart icon
-        },
-
-        navigation: {
-            buttonOptions: {
-                enabled: false //若有引用export.js時關閉匯出按鈕
-            }
-        },
-
-        boost: {
-            enabled: true,
-            // useGPUTranslations: true,
-        },
-
-        plotOptions: {
-            series: {
-                animation: false, //關閉動畫
-            },
-        },
-
-        title: {
-            text: ''
-        },
-
-        subtitle: {
-            text: ''
-        },
-
-        tooltip: {
-            useHTML: true,
-            enabled: useTooltip,
-        },
-
-        legend: {
-            useHTML: true,
-            enabled: useLegend,
-        },
-
-    }
-
-    return _opt
-}
+<h3 class="subsection-title" style="margin-top: 1em" data-jsdoc-vuejs="section-props">Props</h3>
+<table data-jsdoc-vuejs="table-props">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Default value</th>
+        <th>Required?</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+        <td><code>options</code></td>
+        <td>Object</td>
+        <td><code>{}</code></td>
+        <td>No</td>
+        <td>輸入設定物件，預設{}</td>
+    </tr></tbody>
+</table>
 
 
-export default getDefOpt
-</code></pre>
-        </article>
-    </section>
+
+
+
+
+
+
+
+<div class="container-overview"><div><p> 
+</li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+            
+                <div class="description usertext"></p></div></div> 
+
+
+<h3 class="subsection-title" style="margin-top: 1em" data-jsdoc-vuejs="section-props">Props</h3>
+<table data-jsdoc-vuejs="table-props">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Default value</th>
+        <th>Required?</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+        <td><code>options</code></td>
+        <td>Object</td>
+        <td><code>{}</code></td>
+        <td>No</td>
+        <td>輸入設定物件，預設{}</td>
+    </tr></tbody>
+</table>
+
+
+
+
+
+
+
+
+
+<div class="container-overview"><div><p> 
+</div>
+            
+
+            
+        
+        </div>
+    
+
+    
+
+    
+
+    
+    
+    
+
+     
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 

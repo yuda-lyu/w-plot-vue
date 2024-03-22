@@ -66,16 +66,9 @@
     ></script>
 
     <!-- w-plot-vue -->
-    <script src="https://cdn.jsdelivr.net/npm/w-plot-vue@1.0.5/dist/w-plot-vue.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/w-plot-vue@1.0.6/dist/w-plot-vue.umd.js"></script>
 
     <style>
-  .v-application--wrap {
-    /* width與max-width fix for IE11, 其外不能使用padding或margin避免失效 */
-    width: 100vw;
-    max-width: 100vw;
-    font-family: inherit;
-    background: #fff;
-  }
   .item {
     /* 因item位於demolink, 提取各範例html後會刪除demolink, 故得額外補上 */
     border-left: 3px solid #ffba75;
@@ -87,19 +80,36 @@
     align-items: center;
   }
   .head1 {
-    margin: 0px;
     padding: 0px 0px 20px 0px;
     font-size: 2.5rem;
   }
-  .bk {
-    vertical-align: top;
-    padding: 10px 0px 60px 0px;
+  .bkh {
+    /* 寬 */
+    padding: 20px;
   }
-  @media screen and (min-width: 1000px) {
-    /* 寬版 */
+  @media screen and (max-width: 800px) {
+    /* 中 */
+    .bkh {
+      padding: 10px;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    /* 窄 */
+    .bkh {
+      padding: 5px;
+    }
+  }
+  .bk {
+    /* 寬 */
+    display: inline-block;
+    vertical-align: top;
+    padding: 0px 80px 60px 0px;
+  }
+  @media screen and (max-width: 1000px) {
+    /* 中窄 */
     .bk {
-      display: inline-block;
-      margin: 0px 80px 0px 0px;
+      display: block;
+      padding: 0px 0px 50px 0px;
     }
   }
     </style>
@@ -107,7 +117,7 @@
 <body
     style="font-family:'Microsoft JhengHei','Avenir','Helvetica'; padding:0px; margin:0px;"
 >
-    <v-app id="app" style="font-family:inherit; padding:0px 30px;">
+    <div id="app" class="bkh" style>
         <div class="head1">
             <span
                 style="cursor:pointer;"
@@ -125,7 +135,7 @@
                     }"
             ></w-bar>
         </div>
-    </v-app>
+    </div>
 
     <script>
   //install
