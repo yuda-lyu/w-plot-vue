@@ -50,12 +50,12 @@
 </template>
 
 <script>
-import get from 'lodash-es/get'
-import each from 'lodash-es/each'
-import merge from 'lodash-es/merge'
-import size from 'lodash-es/size'
-import capitalize from 'lodash-es/capitalize'
-import cloneDeep from 'lodash-es/cloneDeep'
+import get from 'lodash-es/get.js'
+import each from 'lodash-es/each.js'
+import merge from 'lodash-es/merge.js'
+import size from 'lodash-es/size.js'
+import capitalize from 'lodash-es/capitalize.js'
+import cloneDeep from 'lodash-es/cloneDeep.js'
 import haskey from 'wsemi/src/haskey.mjs'
 import iseobj from 'wsemi/src/iseobj.mjs'
 import WTextSelect from 'w-component-vue/src/components/WTextSelect.vue'

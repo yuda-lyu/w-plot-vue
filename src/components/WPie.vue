@@ -26,9 +26,9 @@
 </template>
 
 <script>
-import get from 'lodash-es/get'
-// import map from 'lodash-es/map'
-// import cloneDeep from 'lodash-es/cloneDeep'
+import get from 'lodash-es/get.js'
+// import map from 'lodash-es/map.js'
+// import cloneDeep from 'lodash-es/cloneDeep.js'
 // import isestr from 'wsemi/src/isestr.mjs'
 import iseobj from 'wsemi/src/iseobj.mjs'
 import WPlot2d from './WPlot2d.vue'

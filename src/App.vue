@@ -103,10 +103,10 @@
 </template>
 
 <script>
-import get from 'lodash-es/get'
-import kebabCase from 'lodash-es/kebabCase'
-import each from 'lodash-es/each'
-// import cloneDeep from 'lodash-es/cloneDeep'
+import get from 'lodash-es/get.js'
+import kebabCase from 'lodash-es/kebabCase.js'
+import each from 'lodash-es/each.js'
+// import cloneDeep from 'lodash-es/cloneDeep.js'
 import strright from 'wsemi/src/strright.mjs'
 import strdelright from 'wsemi/src/strdelright.mjs'
 import urlParse from 'wsemi/src/urlParse.mjs'

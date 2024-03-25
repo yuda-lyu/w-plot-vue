@@ -1,4 +1,4 @@
-import get from 'lodash-es/get'
+import get from 'lodash-es/get.js'
 import dig from 'wsemi/src/dig.mjs'
 
 
