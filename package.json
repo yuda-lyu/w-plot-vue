@@ -14,7 +14,7 @@
     "@vue/cli-plugin-babel": "^5.0.8",
     "@vue/cli-plugin-eslint": "^5.0.8",
     "@vue/cli-service": "^5.0.8",
-    "cheerio": "^1.0.0-rc.12",
+    "cheerio": "^1.0.0",
     "eslint": "^8.37.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-friendly-formatter": "^4.0.1",
@@ -29,7 +29,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test": "mocha --parallel --timeout 60000 --experimental-modules --es-module-specifier-resolution=node",
+    "test": "mocha --parallel --timeout 60000",
     "lint": "vue-cli-service lint",
     "deploy": "gh-pages -d docs"
   },
