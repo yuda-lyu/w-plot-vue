@@ -1,13 +1,13 @@
 {
   "name": "w-plot-vue",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "main": "dist/w-plot-vue.umd.js",
   "dependencies": {
     "@mdi/js": "^7.4.47",
     "lodash-es": "^4.18.1",
     "three": "^0.162.0",
     "camera-controls": "^2.8.3",
-    "w-component-vue": "^2.4.77",
+    "w-component-vue": "^2.4.78",
     "wsemi": "^1.8.67"
   },
   "devDependencies": {
