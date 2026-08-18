@@ -94,8 +94,6 @@
 
             <AppZoneWSetMulti v-if="cmpPick==='WSetMulti'"></AppZoneWSetMulti>
 
-            <AppZoneWPlot3d v-if="cmpPick==='WPlot3d'"></AppZoneWPlot3d>
-
         </div>
 
 
@@ -117,16 +115,12 @@ import AppZoneWPie from './AppZoneWPie.vue'
 import AppZoneWRose from './AppZoneWRose.vue'
 import AppZoneWSetOne from './AppZoneWSetOne.vue'
 import AppZoneWSetMulti from './AppZoneWSetMulti.vue'
-import AppZoneWPlot3d from './AppZoneWPlot3d.vue'
 
 
 let kebabCaseFix = (c) => {
     let r = kebabCase(c)
     if (strright(r, 3) === '2-d') {
         r = strdelright(r, 3) + '2d'
-    }
-    else if (strright(r, 3) === '3-d') {
-        r = strdelright(r, 3) + '3d'
     }
     return r
 }
@@ -141,45 +135,33 @@ export default {
         AppZoneWRose,
         AppZoneWSetOne,
         AppZoneWSetMulti,
-        AppZoneWPlot3d,
     },
     data: function() {
         let cmps = [
             {
-                name: '2d',
+                name: 'basic',
                 cmps: [
-                    {
-                        name: 'basic',
-                        cmps: [
-                            { name: 'WPlot2d', },
-                            { name: 'WBar', },
-                            { name: 'WPie', },
-                            { name: 'WRose', },
-                        ],
-                    },
-                    {
-                        name: 'set',
-                        cmps: [
-                            { name: 'WSetOne', },
-                            { name: 'WSetMulti', },
-                            // {
-                            //     name: 'VTest',
-                            //     cmps: [
-                            //         { name: 'VTest1', },
-                            //         { name: 'VTest2', },
-                            //         { name: 'VTest3', },
-                            //     ],
-                            // },
-                        ],
-                    },
+                    { name: 'WPlot2d', },
+                    { name: 'WBar', },
+                    { name: 'WPie', },
+                    { name: 'WRose', },
                 ],
             },
-            // {
-            //     name: '3d',
-            //     cmps: [
-            //         { name: 'WPlot3d', },
-            //     ],
-            // },
+            {
+                name: 'set',
+                cmps: [
+                    { name: 'WSetOne', },
+                    { name: 'WSetMulti', },
+                    // {
+                    //     name: 'VTest',
+                    //     cmps: [
+                    //         { name: 'VTest1', },
+                    //         { name: 'VTest2', },
+                    //         { name: 'VTest3', },
+                    //     ],
+                    // },
+                ],
+            },
         ]
         return {
             kebabCaseFix,

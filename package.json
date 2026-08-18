@@ -1,12 +1,10 @@
 {
   "name": "w-plot-vue",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "main": "dist/w-plot-vue.umd.js",
   "dependencies": {
-    "@mdi/js": "^7.4.47",
-    "three": "^0.162.0",
-    "camera-controls": "^2.8.3",
     "w-component-vue": "^2.4.83",
+    "w-highcharts-vue": "^1.0.5",
     "wsemi": "^1.8.76"
   },
   "devDependencies": {
@@ -18,11 +16,11 @@
     "eslint-config-standard": "^17.1.0",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^16.6.2",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-vue": "^9.10.0",
     "vue": "^2.7.16",
-    "w-package-tools": "^1.1.12",
-    "eslint-plugin-n": "^16.6.2"
+    "w-package-tools": "^1.1.12"
   },
   "scripts": {
     "serve": "vue-cli-service serve",

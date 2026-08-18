@@ -4,9 +4,9 @@
         v-if="options"
     >
 
-        <WHighchartsVueDyn
+        <WHighchartsVue
             :options="options"
-        ></WHighchartsVueDyn>
+        ></WHighchartsVue>
 
     </div>
 </template>
@@ -15,7 +15,7 @@
 import get from 'lodash-es/get.js'
 import isnum from 'wsemi/src/isnum.mjs'
 import cdbl from 'wsemi/src/cdbl.mjs'
-import WHighchartsVueDyn from 'w-component-vue/src/components/WHighchartsVueDyn.vue'
+import WHighchartsVue from 'w-highcharts-vue/src/components/WHighchartsVue.vue'
 
 
 /**
@@ -23,7 +23,7 @@ import WHighchartsVueDyn from 'w-component-vue/src/components/WHighchartsVueDyn.
  */
 export default {
     components: {
-        WHighchartsVueDyn,
+        WHighchartsVue,
     },
     props: {
         options: {
