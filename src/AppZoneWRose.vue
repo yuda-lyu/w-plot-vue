@@ -10,6 +10,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-rose'"
                     :casename="'one-set'"
                 ></demolink>
@@ -25,6 +26,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-rose'"
                     :casename="'one-set & marginLeft & marginRight & marginTop & marginBottom'"
                 ></demolink>
@@ -44,6 +46,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-rose'"
                     :casename="'one-set & roseBorderWidth'"
                 ></demolink>
@@ -60,6 +63,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-rose'"
                     :casename="'one-set & roseWidthRatio'"
                 ></demolink>
@@ -76,6 +80,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-rose'"
                     :casename="'one-set & showLegend'"
                 ></demolink>
@@ -92,6 +97,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-rose'"
                     :casename="'one-set & showLegend & legendPosition'"
                 ></demolink>
@@ -109,6 +115,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-rose'"
                     :casename="'one-set(color)'"
                 ></demolink>
@@ -124,6 +131,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-rose'"
                     :casename="'one-set(color, gradient)'"
                 ></demolink>
@@ -139,6 +147,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-rose'"
                     :casename="'one-set & roseKpColor'"
                 ></demolink>
@@ -162,6 +171,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-rose'"
                     :casename="'one-set & roseKpColor(gradient)'"
                 ></demolink>
@@ -185,6 +195,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-rose'"
                     :casename="'one-set & roseShowLabels'"
                 ></demolink>
@@ -201,6 +212,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-rose'"
                     :casename="'multi-set'"
                 ></demolink>
@@ -218,6 +230,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-rose'"
                     :casename="'multi-set & roseBorderWidth'"
                 ></demolink>
@@ -236,6 +249,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-rose'"
                     :casename="'multi-set & roseWidthRatio'"
                 ></demolink>
@@ -254,6 +268,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-rose'"
                     :casename="'multi-set(series color)'"
                 ></demolink>
@@ -271,6 +286,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-rose'"
                     :casename="'multi-set(series color, gradient)'"
                 ></demolink>
@@ -288,6 +304,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-rose'"
                     :casename="'multi-set(color)'"
                 ></demolink>
@@ -305,6 +322,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-rose'"
                     :casename="'multi-set(color, gradient)'"
                 ></demolink>
@@ -322,6 +340,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-rose'"
                     :casename="'multi-set & roseKpColor'"
                 ></demolink>
@@ -353,6 +372,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-rose'"
                     :casename="'multi-set & roseKpColor(gradient)'"
                 ></demolink>
@@ -384,6 +404,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-rose'"
                     :casename="'multi-set && show labels'"
                 ></demolink>
@@ -401,6 +422,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-rose'"
                     :casename="'multi-set && hide legned'"
                 ></demolink>
@@ -423,7 +445,7 @@
 </template>
 
 <script>
-import demolink from './components/demolink.vue'
+import demolink from 'w-component-vue/src/components/demolink.vue'
 import WRose from './components/WRose.vue'
 
 export default {

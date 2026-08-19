@@ -10,6 +10,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-pie'"
                     :casename="'one-set'"
                 ></demolink>
@@ -25,6 +26,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-pie'"
                     :casename="'one-set & marginLeft & marginRight & marginTop & marginBottom'"
                 ></demolink>
@@ -44,6 +46,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-pie'"
                     :casename="'one-set & pieThicknessRatio'"
                 ></demolink>
@@ -60,6 +63,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-pie'"
                     :casename="'one-set & pieBorderRadius'"
                 ></demolink>
@@ -76,6 +80,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-pie'"
                     :casename="'one-set & pieBorderWidth & pieBorderRadius'"
                 ></demolink>
@@ -93,6 +98,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-pie'"
                     :casename="'one-set(color)'"
                 ></demolink>
@@ -108,6 +114,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-pie'"
                     :casename="'one-set(color, gradient)'"
                 ></demolink>
@@ -123,6 +130,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-pie'"
                     :casename="'one-set & pieKpColor'"
                 ></demolink>
@@ -146,6 +154,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-pie'"
                     :casename="'one-set & pieKpColor(gradient)'"
                 ></demolink>
@@ -169,6 +178,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-pie'"
                     :casename="'one-set & hide labels'"
                 ></demolink>
@@ -185,6 +195,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-pie'"
                     :casename="'one-set & hide legned'"
                 ></demolink>
@@ -206,7 +217,7 @@
 </template>
 
 <script>
-import demolink from './components/demolink.vue'
+import demolink from 'w-component-vue/src/components/demolink.vue'
 import WPie from './components/WPie.vue'
 
 export default {

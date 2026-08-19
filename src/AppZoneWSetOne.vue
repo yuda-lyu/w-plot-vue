@@ -10,6 +10,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-set-one'"
                     :casename="'default'"
                 ></demolink>
@@ -25,6 +26,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-set-one'"
                     :casename="'keySelect'"
                 ></demolink>
@@ -45,6 +47,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-set-one'"
                     :casename="'textPlotType & kpSelectText & widthSelect'"
                 ></demolink>
@@ -69,6 +72,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-set-one'"
                     :casename="'hide labels'"
                 ></demolink>
@@ -85,6 +89,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-set-one'"
                     :casename="'show legned'"
                 ></demolink>
@@ -101,6 +106,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-set-one'"
                     :casename="'slot head'"
                 ></demolink>
@@ -127,7 +133,7 @@
 </template>
 
 <script>
-import demolink from './components/demolink.vue'
+import demolink from 'w-component-vue/src/components/demolink.vue'
 import WSetOne from './components/WSetOne.vue'
 
 export default {

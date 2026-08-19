@@ -10,6 +10,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'one-set'"
                 ></demolink>
@@ -25,6 +26,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'one-set & marginLeft & marginRight & marginTop & marginBottom'"
                 ></demolink>
@@ -44,6 +46,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'one-set & barWidthRatio'"
                 ></demolink>
@@ -60,6 +63,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'one-set & barWidthRatio & barGroupWidthRatio & barBorderRadius'"
                 ></demolink>
@@ -78,6 +82,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'one-set & barWidthRatio & barGroupWidthRatio & barBorderRadius & barBorderWidth'"
                 ></demolink>
@@ -97,6 +102,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'one-set & barColor'"
                 ></demolink>
@@ -113,6 +119,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'one-set & barColor(gradient)'"
                 ></demolink>
@@ -129,6 +136,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'one-set(color)'"
                 ></demolink>
@@ -144,6 +152,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'one-set(color, gradient)'"
                 ></demolink>
@@ -159,6 +168,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'one-set & barKpColor'"
                 ></demolink>
@@ -182,6 +192,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'one-set & barKpColor(gradient)'"
                 ></demolink>
@@ -205,6 +216,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'one-set & hide labels'"
                 ></demolink>
@@ -221,6 +233,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'one-set & show legned'"
                 ></demolink>
@@ -237,6 +250,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'multi-set'"
                 ></demolink>
@@ -254,6 +268,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'multi-set & barWidthRatio'"
                 ></demolink>
@@ -272,6 +287,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'multi-set & barWidthRatio & barGroupWidthRatio & barBorderRadius'"
                 ></demolink>
@@ -292,6 +308,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'multi-set & barWidthRatio & barGroupWidthRatio & barBorderRadius & barBorderWidth'"
                 ></demolink>
@@ -313,6 +330,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'multi-set(series color)'"
                 ></demolink>
@@ -330,6 +348,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'multi-set(series color, gradient)'"
                 ></demolink>
@@ -347,6 +366,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'multi-set(color)'"
                 ></demolink>
@@ -364,6 +384,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'multi-set(color, gradient)'"
                 ></demolink>
@@ -381,6 +402,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'multi-set & barKpColor'"
                 ></demolink>
@@ -412,6 +434,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'multi-set & barKpColor(gradient)'"
                 ></demolink>
@@ -443,6 +466,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'multi-set && show labels'"
                 ></demolink>
@@ -460,6 +484,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'multi-set && hide legned'"
                 ></demolink>
@@ -477,6 +502,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'multi-set && barDisplay(stackNormal)'"
                 ></demolink>
@@ -495,6 +521,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'multi-set && barDisplay(stackNormal) && barShowLabels'"
                 ></demolink>
@@ -513,6 +540,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'multi-set && barDisplay(stackPercent)'"
                 ></demolink>
@@ -532,6 +560,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'horizontal & one-set'"
                 ></demolink>
@@ -550,6 +579,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'horizontal & one-set & marginLeft & marginRight & marginTop & marginBottom'"
                 ></demolink>
@@ -571,6 +601,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'horizontal & one-set & barUseInnerLabelsForHorizontal'"
                 ></demolink>
@@ -590,6 +621,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'horizontal & one-set & barWidthRatio'"
                 ></demolink>
@@ -609,6 +641,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'horizontal & one-set & barWidthRatio & barGroupWidthRatio & barBorderRadius'"
                 ></demolink>
@@ -630,6 +663,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'horizontal & one-set & barWidthRatio & barGroupWidthRatio & barBorderRadius & barBorderWidth'"
                 ></demolink>
@@ -652,6 +686,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'horizontal & one-set & barColor'"
                 ></demolink>
@@ -671,6 +706,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'horizontal & one-set & barColor(gradient)'"
                 ></demolink>
@@ -690,6 +726,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'horizontal & one-set(color)'"
                 ></demolink>
@@ -708,6 +745,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'horizontal & one-set(color, gradient)'"
                 ></demolink>
@@ -726,6 +764,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'horizontal & one-set & barKpColor'"
                 ></demolink>
@@ -752,6 +791,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'horizontal & one-set & barKpColor(gradient)'"
                 ></demolink>
@@ -778,6 +818,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'horizontal & one-set & hide labels'"
                 ></demolink>
@@ -797,6 +838,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'horizontal & one-set & show legned'"
                 ></demolink>
@@ -816,6 +858,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'horizontal & multi-set'"
                 ></demolink>
@@ -836,6 +879,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'horizontal & multi-set & barUseInnerLabelsForHorizontal & barGroupWidthRatio'"
                 ></demolink>
@@ -858,6 +902,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'horizontal & multi-set & barWidthRatio'"
                 ></demolink>
@@ -879,6 +924,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'horizontal & multi-set & barWidthRatio & barGroupWidthRatio & barBorderRadius'"
                 ></demolink>
@@ -902,6 +948,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'horizontal & multi-set & barWidthRatio & barGroupWidthRatio & barBorderRadius & barBorderWidth'"
                 ></demolink>
@@ -926,6 +973,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'horizontal & multi-set(series color)'"
                 ></demolink>
@@ -946,6 +994,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'horizontal & multi-set(series color, gradient)'"
                 ></demolink>
@@ -966,6 +1015,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'horizontal & multi-set(color)'"
                 ></demolink>
@@ -986,6 +1036,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'horizontal & multi-set(color, gradient)'"
                 ></demolink>
@@ -1006,6 +1057,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'horizontal & multi-set & barKpColor'"
                 ></demolink>
@@ -1040,6 +1092,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'horizontal & multi-set & barKpColor(gradient)'"
                 ></demolink>
@@ -1074,6 +1127,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'horizontal & multi-set && show labels'"
                 ></demolink>
@@ -1094,6 +1148,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'horizontal & multi-set && hide legned'"
                 ></demolink>
@@ -1114,6 +1169,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'horizontal & multi-set && barDisplay(stackNormal)'"
                 ></demolink>
@@ -1135,6 +1191,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'horizontal & multi-set && barDisplay(stackNormal) && barShowLabels'"
                 ></demolink>
@@ -1156,6 +1213,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-bar'"
                     :casename="'horizontal & multi-set && barDisplay(stackPercent)'"
                 ></demolink>
@@ -1183,7 +1241,7 @@
 </template>
 
 <script>
-import demolink from './components/demolink.vue'
+import demolink from 'w-component-vue/src/components/demolink.vue'
 import WBar from './components/WBar.vue'
 
 export default {

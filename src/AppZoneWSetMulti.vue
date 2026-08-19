@@ -10,6 +10,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-set-multi'"
                     :casename="'default'"
                 ></demolink>
@@ -25,6 +26,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-set-multi'"
                     :casename="'keySelect'"
                 ></demolink>
@@ -45,6 +47,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-set-multi'"
                     :casename="'textPlotType & kpSelectText & widthSelect'"
                 ></demolink>
@@ -72,6 +75,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-set-multi'"
                     :casename="'hide labels'"
                 ></demolink>
@@ -88,6 +92,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-set-multi'"
                     :casename="'hide legned'"
                 ></demolink>
@@ -104,6 +109,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-set-multi'"
                     :casename="'slot head'"
                 ></demolink>
@@ -130,7 +136,7 @@
 </template>
 
 <script>
-import demolink from './components/demolink.vue'
+import demolink from 'w-component-vue/src/components/demolink.vue'
 import WSetMulti from './components/WSetMulti.vue'
 
 export default {

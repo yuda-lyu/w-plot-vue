@@ -10,6 +10,7 @@
 
             <div class="bk">
                 <demolink
+                    :pkgname="'w-plot-vue'"
                     :kbname="'w-plot-2d'"
                     :casename="'default'"
                 ></demolink>
@@ -28,7 +29,7 @@
 </template>
 
 <script>
-import demolink from './components/demolink.vue'
+import demolink from 'w-component-vue/src/components/demolink.vue'
 import WPlot2d from './components/WPlot2d.vue'
 
 
