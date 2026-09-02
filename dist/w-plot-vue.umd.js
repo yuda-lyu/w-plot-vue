@@ -1,5 +1,5 @@
 /*!
- * w-plot-vue v1.0.27
+ * w-plot-vue v1.0.28
  * (c) 2018-2021 yuda-lyu(semisphere)
  * Released under the MIT License.
  */
