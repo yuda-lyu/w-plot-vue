@@ -63,7 +63,7 @@ export default {
 
 Add script for w-plot-vue.
 ```alias
-<script src="https://cdn.jsdelivr.net/npm/w-plot-vue@1.0.42/dist/w-plot-vue.umd.js"></script>
+<script src="https://yuda-lyu.github.io/w-plot-vue/dist/w-plot-vue.umd.js"></script>
 ```
 
 Directly use:
