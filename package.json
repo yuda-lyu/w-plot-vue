@@ -1,10 +1,10 @@
 {
   "name": "w-plot-vue",
-  "version": "1.0.68",
+  "version": "1.0.69",
   "main": "dist/w-plot-vue.umd.js",
   "dependencies": {
     "w-component-vue": "^2.5.68",
-    "w-highcharts-vue": "^1.0.58",
+    "w-highcharts-vue": "^1.0.59",
     "wsemi": "^1.9.72"
   },
   "devDependencies": {
