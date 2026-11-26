@@ -1,11 +1,11 @@
 {
   "name": "w-plot-vue",
-  "version": "1.0.76",
+  "version": "1.0.77",
   "main": "dist/w-plot-vue.umd.js",
   "dependencies": {
-    "w-component-vue": "^2.5.75",
-    "w-highcharts-vue": "^1.0.66",
-    "wsemi": "^1.9.79"
+    "w-component-vue": "^2.5.76",
+    "w-highcharts-vue": "^1.0.67",
+    "wsemi": "^1.9.81"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^5.0.8",
@@ -19,7 +19,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-vue": "^9.10.0",
     "vue": "^2.7.16",
-    "w-package-tools": "^1.1.31"
+    "w-package-tools": "^1.1.32"
   },
   "scripts": {
     "serve": "vue-cli-service serve",
